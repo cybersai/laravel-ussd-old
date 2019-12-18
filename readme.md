@@ -1,4 +1,4 @@
-# LaravelUSSD
+# Laravel Ussd
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
@@ -44,14 +44,14 @@ If you discover any security related issues, please email isaacsai030@gmail.com 
 
 MIT. Please see the [license file](license.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/cybersai/laravelussd.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/cybersai/laravelussd.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/cybersai/laravelussd/master.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/cybersai/laravel-ussd.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/cybersai/laravel-ussd.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/cybersai/laravel-ussd/master.svg?style=flat-square
 [ico-styleci]: https://styleci.io/repos/12345678/shield
 
-[link-packagist]: https://packagist.org/packages/cybersai/laravelussd
-[link-downloads]: https://packagist.org/packages/cybersai/laravelussd
-[link-travis]: https://travis-ci.org/cybersai/laravelussd
+[link-packagist]: https://packagist.org/packages/cybersai/laravel-ussd
+[link-downloads]: https://packagist.org/packages/cybersai/laravel-ussd
+[link-travis]: https://travis-ci.org/cybersai/laravel-ussd
 [link-styleci]: https://styleci.io/repos/12345678
 [link-author]: https://github.com/cybersai
 [link-contributors]: ../../contributors
