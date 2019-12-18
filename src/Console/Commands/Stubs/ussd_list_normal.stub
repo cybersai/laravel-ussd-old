@@ -26,7 +26,7 @@ class DummyClass extends TemplateListView
         $this->content = ['One', 'Two', 'There', 'Four', 'Five'];
         $this->page = $request->getPage();
         $this->number_per_page = 3;
-        # $this->next = NextClass::class;
+//        $this->next = NextClass::class;
         parent::__construct($request);
     }
 }

@@ -22,6 +22,7 @@ class DummyClass extends Controller
             try {
                 $view = $router->route();
                 $tracker->snapshot = $restored_ussd->snapshotHistory();
+                $tracker->save();
                 return response()->json($restored_ussd->respondToProvider($view));
             } catch (ViewNotFoundException $exception) {
                 return response()->json(['message' => 'View not found']);

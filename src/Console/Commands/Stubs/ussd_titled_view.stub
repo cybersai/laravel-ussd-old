@@ -19,7 +19,7 @@ class DummyClass extends TemplateView
     {
         $this->title = 'Title';
         $this->content = 'Hello from DummyClass';
-        # $this->next = NextView::class;
+//        $this->next = NextView::class;
         parent::__construct($request);
     }
 

@@ -18,7 +18,7 @@ class DummyClass extends TemplateView
     public function __construct($request)
     {
         $this->content = "Hello From DummyClass";
-        # $this->next = NextView::class;
+//        $this->next = NextView::class;
         parent::__construct($request);
     }
 }
