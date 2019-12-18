@@ -1,0 +1,16 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Database\Eloquent\Model;
+
+class DummyClass extends Model
+{
+    protected $fillable = [
+        'session_id',
+        'phone_number',
+        'network',
+        'next_view',
+        'snapshot'
+    ];
+}

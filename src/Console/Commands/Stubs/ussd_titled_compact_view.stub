@@ -1,0 +1,26 @@
+<?php
+
+namespace DummyNamespace;
+
+
+use Cybersai\Ussd\Requests\UssdRequest;
+use Cybersai\Ussd\Styles\CompactTitleView;
+use Cybersai\Ussd\Templates\TemplateView;
+
+class DummyClass extends TemplateView
+{
+    use CompactTitleView;
+
+    /**
+     * DummyClass constructor.
+     * @param UssdRequest $request
+     */
+    public function __construct($request)
+    {
+        $this->title = 'Title';
+        $this->content = 'Hello from DummyClass';
+        # $this->next = NextView::class;
+        parent::__construct($request);
+    }
+
+}

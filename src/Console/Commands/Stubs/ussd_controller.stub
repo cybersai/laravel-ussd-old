@@ -1,0 +1,41 @@
+<?php
+
+namespace DummyNamespace;
+
+use App\Tracker;
+use Cybersai\Ussd\Adapters\sourceRequestAdapter;
+use Cybersai\Ussd\Exceptions\ViewNotFoundException;
+use Cybersai\Ussd\Router\UssdRouter;
+use Cybersai\Ussd\Router\UssdRouterConfig;
+use Illuminate\Http\Request;
+
+class DummyClass extends Controller
+{
+    public function index(Request $request)
+    {
+        $ussd_request = new sourceRequestAdapter($request->toArray());
+        $tracker = Tracker::where('session_id', $ussd_request->getSessionId())->first();
+        if ($tracker) {
+            $restored_ussd = sourceRequestAdapter::createFromSnapshot($tracker->snapshot);
+            $router = new UssdRouter($restored_ussd, new UssdRouterConfig());
+            $router->acceptUserInput($ussd_request->getUserInput());
+            try {
+                $view = $router->route();
+                $tracker->snapshot = $restored_ussd->snapshotHistory();
+                return response()->json($restored_ussd->respondToProvider($view));
+            } catch (ViewNotFoundException $exception) {
+                return response()->json(['message' => 'View not found']);
+            }
+        } else {
+            $view = new DefaultView($ussd_request);
+            $tracker = Tracker::create([
+                'session_id' => $ussd_request->getSessionId(),
+                'phone_number' => $ussd_request->getMSISDN(),
+                'network' => $ussd_request->getNetwork(),
+                'next_view' => $ussd_request->getLastView()->getNext(),
+                'snapshot' => $ussd_request->snapshotHistory()
+            ]);
+            return response()->json($ussd_request->respondToProvider($view));
+        }
+    }
+}

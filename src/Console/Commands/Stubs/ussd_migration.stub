@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class DummyClass extends Migration
+{
+    /**Commands
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('ussd_migration', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('session_id')->unique();
+            $table->string('phone_number');
+            $table->string('network');
+            $table->string('next_view');
+            $table->longText('snapshot');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('ussd_migration');
+    }
+}

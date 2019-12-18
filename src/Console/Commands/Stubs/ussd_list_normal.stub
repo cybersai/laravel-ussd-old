@@ -1,0 +1,32 @@
+<?php
+namespace DummyNamespace;
+
+use Cybersai\Ussd\Modifiers\ListSeparatorLineBreak;
+use Cybersai\Ussd\Modifiers\NumberingSeparatorDotPlusSpace;
+use Cybersai\Ussd\Modifiers\NumericNumbering;
+use Cybersai\Ussd\Modifiers\StringArrayList;
+use Cybersai\Ussd\Requests\UssdRequest;
+use Cybersai\Ussd\Styles\NormalTitleView;
+use Cybersai\Ussd\Styles\NoSubTitleAndSubFooterListView;
+use Cybersai\Ussd\Templates\TemplateListView;
+
+class DummyClass extends TemplateListView
+{
+    use NormalTitleView, NoSubTitleAndSubFooterListView,
+        NumericNumbering, ListSeparatorLineBreak,
+        NumberingSeparatorDotPlusSpace, StringArrayList;
+
+    /**
+     * DummyClass constructor.
+     * @param UssdRequest $request
+     */
+    public function __construct($request)
+    {
+        $this->title = 'Title';
+        $this->content = ['One', 'Two', 'There', 'Four', 'Five'];
+        $this->page = $request->getPage();
+        $this->number_per_page = 3;
+        # $this->next = NextClass::class;
+        parent::__construct($request);
+    }
+}
