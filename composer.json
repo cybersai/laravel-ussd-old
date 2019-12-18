@@ -10,9 +10,10 @@
     ],
     "homepage": "https://github.com/cybersai/laravelussd",
     "keywords": ["Laravel", "LaravelUssd", "Ussd"],
+    "minimum-stability": "alpha",
     "require": {
         "illuminate/support": "~5|~6",
-        "cybersai/ussd": "dev-master"
+        "cybersai/ussd": "~1.1"
     },
     "require-dev": {
         "phpunit/phpunit": "~7.0",
