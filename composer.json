@@ -1,6 +1,6 @@
 {
     "name": "cybersai/laravel-ussd",
-    "description": ":description",
+    "description": "A Laravel package that speed up the development process for USSD",
     "license": "MIT",
     "authors": [
         {
