@@ -1,9 +1,8 @@
-# Laravel USSD Framework
+# Laravel USSD Package
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][link-styleci]
 
 Easily build USSD apps with PHP[Laravel].
 
@@ -112,4 +111,4 @@ MIT. Please see the [license file](license.md) for more information.
 [link-styleci]: https://styleci.io/repos/12345678
 [link-author]: https://github.com/cybersai
 [link-author2]: https://github.com/manfordbenjamin
-[link-contributors]: ../../contributors
+[link-contributors]: https://github.com/CyberSai/laravel-ussd/graphs/contributors
