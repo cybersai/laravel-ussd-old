@@ -5,11 +5,17 @@
     "authors": [
         {
             "name": "Isaac Adzah Sai",
-            "email": "isaacsai030@gmail.com"
+            "email": "isaacsai030@gmail.com",
+            "role": "Developer"
         }
     ],
     "homepage": "https://github.com/cybersai/laravelussd",
-    "keywords": ["Laravel", "LaravelUssd", "Ussd"],
+    "keywords": [
+        "laravel",
+        "laravel-ussd",
+        "ussd",
+        "framework"
+    ],
     "minimum-stability": "alpha",
     "require": {
         "illuminate/support": "~5|~6",
@@ -34,11 +40,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "CyberSai\\LaravelUssd\\LaravelUssdServiceProvider"
-            ],
-            "aliases": {
-                "LaravelUssd": "CyberSai\\LaravelUssd\\Facades\\LaravelUssd"
-            }
+                "CyberSai\\LaravelUssd\\UssdServiceProvider"
+            ]
         }
     }
 }
