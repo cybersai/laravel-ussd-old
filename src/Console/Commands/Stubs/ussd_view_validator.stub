@@ -1,0 +1,17 @@
+<?php
+namespace DummyNamespace;
+
+class DummyClass extends \Cybersai\Ussd\Templates\TemplateViewValidator
+{
+    public function __construct($request)
+    {
+        $this->views = [];
+        parent::__construct($request);
+    }
+
+    function getValidView()
+    {
+        // TODO: Implement getValidView() method.
+    }
+
+}

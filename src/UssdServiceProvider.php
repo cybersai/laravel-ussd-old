@@ -8,6 +8,8 @@ use CyberSai\LaravelUssd\Console\Commands\CreateMigration;
 use CyberSai\LaravelUssd\Console\Commands\CreateModel;
 use CyberSai\LaravelUssd\Console\Commands\CreateSimpleView;
 use CyberSai\LaravelUssd\Console\Commands\CreateTitledView;
+use CyberSai\LaravelUSSD\Console\Commands\CreateViewGroup;
+use CyberSai\LaravelUSSD\Console\Commands\CreateViewValidator;
 use Illuminate\Support\ServiceProvider;
 
 class UssdServiceProvider extends ServiceProvider
@@ -29,7 +31,9 @@ class UssdServiceProvider extends ServiceProvider
                 CreateSimpleView::class,
                 CreateTitledView::class,
                 CreateListView::class,
-                CreateController::class
+                CreateController::class,
+                CreateViewGroup::class,
+                CreateViewValidator::class
             ]);
         }
     }

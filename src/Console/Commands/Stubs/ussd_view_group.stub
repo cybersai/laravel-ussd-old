@@ -1,0 +1,16 @@
+<?php
+namespace DummyNamespace;
+
+class DummyClass extends \Cybersai\Ussd\Templates\TemplateViewGroup
+{
+    public function __construct($request)
+    {
+        $this->views = [];
+        parent::__construct($request);
+    }
+    
+    public function getSelectedView()
+    {
+        // TODO: Implement getSelectedView() method.
+    }
+}
