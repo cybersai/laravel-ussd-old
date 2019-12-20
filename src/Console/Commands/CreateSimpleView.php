@@ -29,6 +29,6 @@ class CreateSimpleView extends GeneratorCommand
 
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\USSD';
+        return $rootNamespace.'\Ussd';
     }
 }

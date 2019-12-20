@@ -25,7 +25,7 @@ class CreateTitledView extends GeneratorCommand
 
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\USSD';
+        return $rootNamespace.'\Ussd';
     }
 
     protected function getStub()

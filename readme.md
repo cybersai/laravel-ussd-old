@@ -19,7 +19,7 @@ The package will automatically register itself.
 
 You can optionally publish the config file with:
 ```bash
-php artisan vendor:publish --provider="CyberSai\LaravelUssd\UssdServiceProvider" --tag="config"
+php artisan vendor:publish --provider="CyberSai\LaravelUssd\UssdServiceProvider"
 ```
 
 This is the contents of the published config file:
@@ -48,14 +48,14 @@ Supported USSD providers [Ghana]:
 php artisan ussd:controller filename
 ```
 
-**Create USSD Tracker Migration**
+**Create USSD Migration**
 ```bash
-php artisan ussd:migration filename
+php artisan ussd:migration tablename
 ```
 
 **Create USSD Model**
 ```bash
-php artisan ussd:model filename
+php artisan ussd:model classname
 ```
 
 **Create USSD List View**
