@@ -94,6 +94,7 @@ If you discover any security related issues, please email isaacsai030@gmail.com 
 ## Credits
 
 - [Isaac Adzah Sai][link-author]
+- [Benjamin Manford][link-author2]
 - [All Contributors][link-contributors]
 
 ## License
@@ -110,4 +111,5 @@ MIT. Please see the [license file](license.md) for more information.
 [link-travis]: https://travis-ci.org/cybersai/laravel-ussd
 [link-styleci]: https://styleci.io/repos/12345678
 [link-author]: https://github.com/cybersai
+[link-author2]: https://github.com/manfordbenjamin
 [link-contributors]: ../../contributors
