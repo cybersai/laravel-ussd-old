@@ -1,21 +1,77 @@
-# Laravel Ussd
+# Laravel USSD Framework
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
 [![StyleCI][ico-styleci]][link-styleci]
 
-This is where your description should go. Take a look at [contributing.md](contributing.md) to see a to do list.
+Easily build USSD apps with PHP[Laravel].
 
 ## Installation
 
-Via Composer
+You can install the package via composer:
 
 ``` bash
-$ composer require cybersai/laravelussd
+$ composer require cybersai/laravel-ussd
 ```
 
+The package will automatically register itself.
+
+You can optionally publish the config file with:
+```bash
+php artisan vendor:publish --provider="CyberSai\LaravelUssd\UssdServiceProvider" --tag="config"
+```
+
+This is the contents of the published config file:
+
+```php
+return [
+    'provider' => env('USSD_PROVIDER', 'korba')
+];
+```
+
+**Update your `.env` file with the USSD provider key value pair**
+```bash
+USSD_PROVIDER=
+```
+
+Supported USSD providers [Ghana]:
+* [korba](http://korbaweb.com)
+* [hubtel](https://developers.hubtel.com/docs/getting-started-with-ussd)
+* [nsano](https://www.nsano.com)
+* [txtghana](https://www.txtghana.com)
+
 ## Usage
+
+**Create USSD Controller**
+```bash
+php artisan ussd:controller filename
+```
+
+**Create USSD Tracker Migration**
+```bash
+php artisan ussd:migration filename
+```
+
+**Create USSD Model**
+```bash
+php artisan ussd:model filename
+```
+
+**Create USSD List View**
+```bash
+php artisan ussd:view-list filename
+```
+
+**Create USSD Simple View**
+```bash
+php artisan ussd:view-simple filename
+```
+
+**Create USSD Titled View**
+```bash
+php artisan ussd:view-titled filename
+```
 
 ## Change log
 
