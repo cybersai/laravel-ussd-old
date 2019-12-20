@@ -19,7 +19,7 @@ class CreateTitledView extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Create a USSD View with Title';
+    protected $description = 'Create USSD Titled View';
 
     protected $type = 'Titled View';
 

@@ -18,7 +18,7 @@ class CreateModel extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Create A new USSD model';
+    protected $description = 'Create USSD Model';
 
     protected $type = 'USSD Model';
 

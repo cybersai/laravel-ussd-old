@@ -18,7 +18,7 @@ class CreateSimpleView extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Create a very Simple USSD View';
+    protected $description = 'Create USSD Simple View';
 
     protected $type = 'Simple View';
 
