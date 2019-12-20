@@ -37,7 +37,7 @@ class CreateController extends GeneratorCommand
     protected function replaceClass($stub, $name)
     {
         return str_replace(['DummyClass', 'source'],
-            [$this->argument('name'), ucfirst(Config::get('laravelussd.provider'))],
+            [$this->argument('name'), ucfirst(Config::get('ussd.provider'))],
             $stub);
     }
 }

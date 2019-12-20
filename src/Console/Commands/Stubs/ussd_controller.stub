@@ -18,9 +18,9 @@ class DummyClass extends Controller
         if ($tracker) {
             $restored_ussd = sourceRequestAdapter::createFromSnapshot($tracker->snapshot);
             $router = new UssdRouter($restored_ussd, new UssdRouterConfig());
-            $router->acceptUserInput($ussd_request->getUserInput());
             try {
-                $view = $router->route();
+                $view = $router->route($ussd_request->getUserInput());
+                $restored_ussd->addHistory($view, $ussd_request->getUserInput());
                 $tracker->snapshot = $restored_ussd->snapshotHistory();
                 $tracker->save();
                 return response()->json($restored_ussd->respondToProvider($view));
@@ -29,6 +29,7 @@ class DummyClass extends Controller
             }
         } else {
             $view = new DefaultView($ussd_request);
+            $ussd_request->addHistory($view, $ussd_request->getUserInput());
             $tracker = Tracker::create([
                 'session_id' => $ussd_request->getSessionId(),
                 'phone_number' => $ussd_request->getMSISDN(),
