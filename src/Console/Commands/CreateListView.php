@@ -18,7 +18,7 @@ class CreateListView extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Create a Normal USSD list view';
+    protected $description = 'Create USSD List View';
 
     protected $type = 'List View';
 

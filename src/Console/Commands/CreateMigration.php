@@ -19,7 +19,7 @@ class CreateMigration extends GeneratorCommand
      *
      * @var string
      */
-    protected $description = 'Create a new USSD Tracker migration';
+    protected $description = 'Create USSD Tracker Migration';
 
     protected $type = 'USSD migration';
 
