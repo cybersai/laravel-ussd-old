@@ -34,10 +34,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Cybersai\\LaravelUssd\\LaravelUssdServiceProvider"
+                "Cybersai\\LaravelUssd\\UssdServiceProvider"
             ],
             "aliases": {
-                "LaravelUssd": "Cybersai\\LaravelUssd\\Facades\\LaravelUssd"
+                "LaravelUssd": "Cybersai\\LaravelUssd\\Facades\\Ussd"
             }
         }
     }
