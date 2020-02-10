@@ -1,6 +1,6 @@
 <?php
 
-namespace CyberSai\LaravelUSSD\Console\Commands;
+namespace Cybersai\LaravelUssd\Console\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputOption;
@@ -25,7 +25,7 @@ class CreateTitledView extends GeneratorCommand
 
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Ussd';
+        return $rootNamespace.'\Ussd\Views';
     }
 
     protected function getStub()

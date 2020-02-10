@@ -1,10 +1,9 @@
 <?php
 
-namespace CyberSai\LaravelUSSD\Console\Commands;
+namespace Cybersai\LaravelUssd\Console\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Str;
 
 class CreateController extends GeneratorCommand
 {

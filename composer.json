@@ -1,47 +1,44 @@
 {
-    "name": "cybersai/laravel-ussd",
-    "description": "A Laravel package that speed up the development process for USSD",
+    "name": "cybersai/laravelussd",
+    "description": "Quick Ussd apps",
     "license": "MIT",
     "authors": [
         {
             "name": "Isaac Adzah Sai",
             "email": "isaacsai030@gmail.com",
-            "role": "Developer"
+            "homepage": "author homepage"
         }
     ],
     "homepage": "https://github.com/cybersai/laravelussd",
-    "keywords": [
-        "laravel",
-        "laravel-ussd",
-        "ussd",
-        "framework"
-    ],
-    "minimum-stability": "alpha",
+    "keywords": ["Laravel", "LaravelUssd"],
     "require": {
         "illuminate/support": "~5|~6",
-        "cybersai/ussd": "~1.2"
+        "cybersai/ussd": "@dev"
     },
     "require-dev": {
-        "phpunit/phpunit": "~7.0",
+        "phpunit/phpunit": "^8.0",
         "mockery/mockery": "^1.1",
-        "orchestra/testbench": "~3.0",
+        "orchestra/testbench": "~3|~4",
         "sempro/phpunit-pretty-print": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "CyberSai\\LaravelUssd\\": "src/"
+            "Cybersai\\LaravelUssd\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "CyberSai\\LaravelUssd\\Tests\\": "tests"
+            "Cybersai\\LaravelUssd\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "CyberSai\\LaravelUssd\\UssdServiceProvider"
-            ]
+                "Cybersai\\LaravelUssd\\LaravelUssdServiceProvider"
+            ],
+            "aliases": {
+                "LaravelUssd": "Cybersai\\LaravelUssd\\Facades\\LaravelUssd"
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `LaravelUSSD` will be documented in this file.
+All notable changes to `LaravelUssd` will be documented in this file.
 
 ## Version 1.0
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace CyberSai\LaravelUSSD\Console\Commands;
+namespace Cybersai\LaravelUssd\Console\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 
@@ -29,6 +29,6 @@ class CreateSimpleView extends GeneratorCommand
 
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace.'\Ussd';
+        return $rootNamespace.'\Ussd\Views';
     }
 }

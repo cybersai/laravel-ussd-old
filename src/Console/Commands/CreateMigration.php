@@ -1,6 +1,6 @@
 <?php
 
-namespace CyberSai\LaravelUSSD\Console\Commands;
+namespace Cybersai\LaravelUssd\Console\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;

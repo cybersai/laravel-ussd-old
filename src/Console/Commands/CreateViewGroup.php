@@ -1,6 +1,6 @@
 <?php
 
-namespace CyberSai\LaravelUSSD\Console\Commands;
+namespace Cybersai\LaravelUssd\Console\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 
@@ -11,7 +11,7 @@ class CreateViewGroup extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'command:name';
+    protected $name = 'ussd:view-group';
 
     /**
      * The console command description.
@@ -27,4 +27,8 @@ class CreateViewGroup extends GeneratorCommand
         return __DIR__.'/Stubs/ussd_view_group.stub';
     }
 
+    protected function getDefaultNamespace($rootNamespace)
+    {
+        return $rootNamespace.'\Ussd\ViewGroups';
+    }
 }

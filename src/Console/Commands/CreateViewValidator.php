@@ -1,6 +1,6 @@
 <?php
 
-namespace CyberSai\LaravelUSSD\Console\Commands;
+namespace Cybersai\LaravelUssd\Console\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 
@@ -12,7 +12,7 @@ class CreateViewValidator extends GeneratorCommand
      *
      * @var string
      */
-    protected $name = 'command:name';
+    protected $name = 'ussd:validator';
 
     /**
      * The console command description.
@@ -26,5 +26,10 @@ class CreateViewValidator extends GeneratorCommand
     protected function getStub()
     {
         return __DIR__.'/Stubs/ussd_view_validator.stub';
+    }
+
+    protected function getDefaultNamespace($rootNamespace)
+    {
+        return $rootNamespace.'\Ussd\Validators';
     }
 }
